@@ -1,0 +1,12 @@
+---
+import PublicLayout from '../../layouts/PublicLayout.astro';
+import DesignArt from '../../components/DesignArt.astro';
+import DesignCard from '../../components/DesignCard.astro';
+import { designs, type Design } from '../../data/designs';
+
+export function getStaticPaths() {
+    return designs.map((d) => ({params: {id: d.slug}, props: { design: d}}));
+}
+---
+
+MAGIC!
