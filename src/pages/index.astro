@@ -5,7 +5,7 @@ import { designs } from '../data/designs';
 
 
 const heroDesigns = designs.slice(0, 4);
-const featuredDesigns = designs.slice(0, 8);
+const featuredDesigns = designs.slice(0, 9);
 
 const stats = ['12,480 designs', '3,800 makers', '$48,200 paid to designers', '9 products', '61k prints shipped', '4.9★ avg rating'];
 
@@ -164,7 +164,7 @@ const burst = Array.from({ length: 24 }, (_, i) => {
 
 		<div class="mt-7 flex flex-wrap gap-2.5">{filters.map((f,i) => <button class={`sticker rounded-full px-4 py-2 text-sm font-bold transition-all hover:-translate-y-0.5 active:translate-y-0.5 active:shadow-none ${i === 0 ? "bg-ink text-paper" : "bg-white"}`}>{f}</button>)}</div>
 
-		<div class="mt-9 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">{featuredDesigns.map((d, i) => <DesignCard {...d} />)}</div>
+		<div class="mt-9 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">{featuredDesigns.map((d, i) => <DesignCard {...d} featured={i === 0} />)}</div>
 	</section>
 
 	<!-- ── Product types ──────────────────────────────────── -->
